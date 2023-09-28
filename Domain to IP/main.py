@@ -6,9 +6,9 @@ def get_ip_from_domain(domain):
         ip = info[0][4][0]
         return ip
     except (socket.gaierror, IndexError):
-        return "Konnte IP nicht auflösen"
+        return "Error by getting IP"
 
 if __name__ == "__main__":
-    domain = input("Gib eine Domain ein: ")
+    domain = input("Enter a Domain: ")
     ip_address = get_ip_from_domain(domain)
-    print(f"IP-Adresse von {domain}: {ip_address}")
+    print(f"IP-Adresse from {domain}: {ip_address}")
